@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+body {
+    background-color: #a3acada6;
+}
+
+main {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.container {
+    background-color: #a3acad1a;
+    width: 50vw;
+    margin-left: 25%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    box-sizing: border-box;
+}
+
+.items {
+    background-color: white;
+    margin-top: 15px;
+    height: 12vw;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.company_name {
+    text-align: center;
+    color: rgba(63, 58, 58, 0.792);
+    font-size: 15px;
+    font-weight: 1000;
+    margin-top: 5px;
+}
+
+.company1 {
+    float: left;
+}
+
+.company2 {
+    float: right;
+}
+
+.company1,
+.company2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 95%;
+    width: 40%;
+    position: relative;
+    border-radius: 5px;
+    ;
+}
+
+section {
+    display: inline-block;
+}
+
+.vs {
+    position: absolute;
+    left: 47%;
+    top: 20%;
+    font-size: 25px;
+}
+
+.logoContainer {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.star-1,
+.star-2 {
+    height: 60%;
+    padding-top: 20px;
+    padding-left: 25px;
+}
+
+.btn {
+    height: 30px;
+    width: 150px;
+    border: none;
+    background-color: rgb(237, 75, 75);
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 37%;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.label {
+    color: black;
+    font-weight: bold;
+}
+
+.fa-solid {
+    color: black;
+}
+
+#rank {
+    position: absolute;
+    margin-left: 325px;
+    z-index: 1;
+}
+
+.rank_num {
+    margin-bottom: 130px;
+    margin-top: -10px;
+    height: 55px;
+    width: 60px;
+}

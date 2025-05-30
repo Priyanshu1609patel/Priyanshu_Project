@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+body {
+    background-image: linear-gradient(rgba(187, 215, 250, 0.932), rgba(240, 202, 250, 0.918));
+}
+
+#main_cont {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    padding-top: 6%;
+    justify-content: center;
+    align-items: center;   
+}
+
+#heading {
+    color: rgba(70, 68, 68, 0.87);
+    font-family: 'Unbounded', cursive;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top:10px;
+    padding-left:20px;
+}
+
+#cont1 {
+    width: 50%;
+}
+
+#cont2 {
+    height: 440px;
+    width: 50%;
+    padding-left: 4%;
+    margin-right: 3%;
+    background-color: white;
+    box-shadow: 1px 1px 10px grey;
+}
+
+#add-box1 {
+    display: flex;
+}
+
+.box {
+    background-color: white;
+    height: 180px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px grey;
+    text-align: center;
+}
+
+.box img {
+    height: 80px;
+    transition: all 0.3s;
+}
+
+.box h1 {
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.box p {
+    font-size: 10px;
+    margin-top: 25px;
+}
+
+#content {
+    margin-top: 20px;
+    padding-top:15px;
+}
+
+input,
+#content1 {
+    width: 91%;
+    height: 35px;
+    border: none;
+    margin: 5px 0px;
+    padding-left: 10px;
+    background-color: rgba(233, 230, 230, 0.76);
+}
+
+.name {
+    width: 44.7%;
+    margin-right: 5px;
+}
+
+textarea {
+    height: 150px;
+    width: 91%;
+    border: none;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 5px 0px;
+    resize: none;
+    background-color: rgba(233, 230, 230, 0.76);
+}
+
+.btn {
+    height: 40px;
+    width: 44.8%;
+    margin-right: 5px;
+    border: none;
+    background-color: rgb(237, 75, 75);
+    color: white;
+    font-size: 15px;
+    font-weight:bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+   background-size: 0 0;
+    transition: .8s;
+    background-image: linear-gradient(0,#0A3D5B , #0A3D5B);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-timing-function: linear;
+/*    transition-duration:0.2s;
+    position: relative;
+    cursor:pointer;*/
+}
+.btn:hover{
+      background-size: 100% 100%;
+    color: #fff;
+}
+
+button:hover, .box:hover{
+    transform: scale(1.01);
+}
+@media (max-width: 1100px) {
+
+    #main_cont {
+        flex-direction: column;
+        padding-bottom: 2%;
+    }
+
+    #cont1 {
+        width: 100%;
+        display: flex;
+    }
+
+    #cont2 {
+        width: 95%;
+        margin: 7% 1.5%;
+    }
+}
+
+@media (max-width: 750px) {
+    #heading {
+        font-size: 25px;
+    }
+
+    #cont1 {
+        flex-direction: column;
+    }
+}

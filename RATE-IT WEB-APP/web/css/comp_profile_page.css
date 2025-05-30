@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+.profile_container {
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    background-color: white;
+    width: 60%;
+}
+
+h2 {
+    position: relative;
+    top: 200px;
+    left: 10%;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.imag img {
+    height: 70px;
+    width: 100px;
+    display: flex;
+    position: relative;
+    top: 25px;
+    left: 32%;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    height: 300px;
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+.t1 {
+    width: 50%;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+
+.t2 {
+    width: 50%;
+}
+
+#btn-box {
+    margin: 7% 17% 1% 17%;
+}
+
+#profile_edit_btn {
+    margin-left: 15%;
+}
+
+.profile_input {
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+#services {
+    width: 145%;
+}
+
+#add-text {
+    width: 78%;
+    height: 27px;
+}
+
+.profile_btn,
+.selector button {
+    background-color: rgb(237, 75, 75);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.profile_btn:hover, .selector button:hover{
+    background-color: rgb(179, 23, 23);
+}
+
+.profile_btn {
+    height: 40px;
+    width: 25%;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.selector button {
+    height: 27px;
+    width: 20%;
+}
+
+@media (max-width: 900px) {
+    .profile_container {
+        flex-direction: column;
+    }
+
+    .block {
+        width: 100%;
+        padding-left: 20%;
+    }
+
+    #btn-box {
+        margin: 7% 7% 2% 7%;
+    }
+}
+
+@media(max-width: 650px) {
+    .block {
+        padding-left: 5%;
+    }
+}
+
+#addnewDiv{
+    display: none;
+}
+#save_btn{
+    display:none;
+}

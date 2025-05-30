@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #a3acada6;
+    position: absolute;
+}
+
+.form-box {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    position: relative;
+    margin: 11% auto;
+    padding: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.input-group {
+    top: 30px;
+    position: absolute;
+    width: 280px;
+    margin-left: 9px;
+    transition: .3s;
+}
+
+.input-group h3 {
+    color: rgb(237, 75, 75);
+    font-family: 'Unbounded', cursive;
+    margin-left: 87px;
+}
+
+.inputs {
+    margin-top: 5px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+    width: 300px;
+    height: 27px;
+    margin-left: 35px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'Unbounded', cursive;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+#Uname,
+#Upassword,
+#Ucpassword,
+#Umail {
+    border: 1.5px solid gray;
+    padding-left: 10px;
+    background-color: #a3acada6;
+}
+
+#fpassword {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+#fpassword:hover {
+    color: black;
+}
+
+#submit_btn {
+    height: 35px;
+    width: 312px;
+    margin-top: 20px;
+    background-color: rgb(237, 75, 75);
+    border: 1.5px solid gray;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#submit_btn1 {
+    height: 35px;
+    width: 90px;
+    margin-top: -5px;
+    background-color: rgb(237, 75, 75);
+    border: 1.5px solid gray;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#low_lbl {
+    letter-spacing: 0px;
+    margin-left: 78px;
+}
+
+.lower-btn {
+    padding-top: 7px;
+    background-color: white;
+    border: none;
+    color: #3d3ddc;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Unbounded', cursive;
+}
+
+#Login {
+    left: 0px;
+}
+
+#Signup {
+    left: 420px;
+}
+
+#umail {
+    background-color: #a3acada6;
+    width: 100px;
+}
+
+
+/* -------------For Phone ------------------------ */
+@media (min-width:330px) and (max-width:419px) {
+    .main_container {
+        height: 106vh;
+        width: 410px;
+    }
+
+    .form-box {
+        width: 300px;
+        margin-top: 25vh;
+        margin-left: 10vw;
+    }
+
+    .inputs {
+        width: 210px;
+        height: 25px;
+    }
+
+    #submit_btn {
+        height: 35px;
+        width: 220px;
+    }
+
+    .input-group h3 {
+        font-size: 17px;
+        margin-left: 55px;
+    }
+
+}
+
+@media (min-width:200px) and (max-width:329px) {
+    .main_container {
+        height: 100vh;
+        width: 280px;
+    }
+
+    .form-box {
+        width: 268px;
+        height: 350px;
+        margin-top: 22vh;
+        margin-left: 0vw;
+    }
+
+    .inputs {
+        width: 190px;
+        height: 25px;
+    }
+
+    #submit_btn {
+        height: 35px;
+        width: 195px;
+    }
+
+    .input-group h3 {
+        font-size: 16px;
+        margin-left: 50px;
+    }
+}
+
+/* -------------- For Tablet And IPad ---------------------------- */
+@media (min-width:420px) and (max-width:770px) {
+    .form-box {
+        height: 420px;
+        width: 380px;
+        margin: 25vh auto;
+    }
+
+    .form-box {
+        height: 350px;
+        width: 370px;
+        margin-top: 25vh;
+        margin-left: auto;
+    }
+
+    .inputs {
+        width: 270px;
+        height: 25px;
+    }
+
+    #submit_btn {
+        height: 35px;
+        width: 270px;
+    }
+}
+
+/* -------------- For Laptop  ---------------------------- */
+@media (min-width:771px) and (max-width:1030px) {
+    .form-box {
+        margin: 20vh auto;
+    }
+}
+
+/* -------------- For Desktop And Large-screen ---------------------------- */
+@media (min-width:1031px) and (max-width:1500px) {
+    .form-box {
+        margin: 20vh auto;
+    }
+}

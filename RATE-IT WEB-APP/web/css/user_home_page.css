@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+
+:root {
+    --header-color: black;
+    --contain-color: #a3acada6;
+    --footer-color: black;
+    --search-logo-left: 750px;
+}
+/* DEMO mate loading nakhi chhe baki change karo game evi */
+/* ama height-width ne change na karvu baki background ne badhu set kari sakay*/
+#loading{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    background-color: darkgray;
+    top:0; left:0;
+    z-index:1;  /* Header na batavvu hoy loading samaye to 2 karido*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* load_effect: to add load effect, change as per your convenience*/
+#load_effect{
+    height:50px;
+    width:50px;
+    background-color: transparent;
+    border:5px solid black;
+    border-bottom:7px solid transparent;
+    border-top:7px solid transparent;
+    border-radius:50%;
+    animation: load 1.3s linear infinite;
+}
+
+@keyframes load{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+nav {
+    height: 8vh;
+    width: 100%;
+    background-color: var(--header-color);
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+    box-shadow: 0px 5.3px 10px #888888;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+
+nav div {
+    display: flex;
+}
+
+.main_logo {
+    height: 30px;
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.dropdown-text {
+    color: white;
+}
+
+.dropdown-text:hover {
+    color: rgb(237, 75, 75);
+}
+
+.dropdown-content {
+    display: none;
+    height: 16vh;
+    width: 9vw;
+    position: absolute;
+    left: -7px;
+    background-color: black;
+    z-index: 1;
+    padding-left: 7px;
+    padding-top: 10px;
+    margin-top: 0.2vh;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    font-size: 11px;
+    font-weight: 3000;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    color: rgb(237, 75, 75);
+}
+
+.dropdown-text:hover .dropdown-content {
+    display: block;
+    background-color: black;
+}
+
+.nav-content {
+    display: none;
+}
+
+.header-content {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header-content:hover {
+    color: rgb(237, 75, 75);
+}
+
+#search-logo {
+    z-index: 1;
+    position: absolute;
+    top: 6px;
+    left: 880px;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: left;
+    transition-timing-function: linear;
+    transition-duration: 0.3s;
+}
+
+#search-logo i {
+    color: white;
+}
+
+#search input {
+    z-index: 0;
+    border-radius: 0px;
+    background-color: black;
+    height: 25px;
+    margin-left: 70px;
+    padding: 10px;
+    border-bottom: 1.5px solid white;
+    color: white;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+    transition-duration: 0.3s;
+}
+
+#search input:focus {
+    outline: none;
+}
+
+.header-btn {
+    height: 28px;
+    width: 140px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s;
+    margin-left: 70px;
+    background-color: rgb(237, 75, 75);
+    color: white;
+}
+
+.header-btn:hover {
+    transform: scale(1.03);
+    color: white;
+    border: none;
+}
+ 
+
+#checkbox {
+    display: none;
+}
+
+.check {
+    color: white;
+    font-size: 25px;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+/*------- Main page styling ---------*/
+body {
+    background-color: #a3acada6;
+}
+
+main {
+    margin-top: 15vh;
+}
+
+.container {
+    display: grid;
+    background-color: #a3acad1a;
+    width: 90vw;
+    margin-left: 5vw;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    box-sizing: border-box;
+    margin-bottom: 45px;
+}
+
+.items {
+    background-color: white;
+    height: 14vw;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+
+.company_name {
+    text-align: center;
+    color: rgba(63, 58, 58, 0.792);
+    font-size: 15px;
+    font-weight: 1000;
+    margin-top: 5px;
+}
+
+.company1 {
+    float: left;
+}
+
+.company2 {
+    float: right;
+}
+
+.company1,
+.company2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 95%;
+    width: 40%;
+    position: relative;
+    border-radius: 5px;
+    ;
+}
+
+section {
+    display: inline-block;
+}
+
+.vs {
+    position: absolute;
+    left: 47%;
+    top: 20%;
+    font-size: 25px;
+}
+
+.logoContainer {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.star-1,
+.star-2 {
+    height: 60%;
+    padding-top: 23px;
+    padding-left: 15px;
+}
+
+.btn {
+    height: 30px;
+    width: 130px;
+    border: none;
+    background-color: rgb(237, 75, 75);
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 39%;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.label {
+    color: black;
+    font-weight: bold;
+}
+
+.fa-solid {
+    color: black;
+}
+
+/* main page styling completes here */
+
+footer {
+    height: 100%;
+    width: 100%;
+    background-color: var(--footer-color);
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#footpart3 {
+    color: white;
+    font-size: 13px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+#footpart3 dl dd {
+    margin: 5px 0px;
+}
+
+#footpart3 a {
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
+}
+
+#footpart3 a:hover {
+    color: white;
+}
+
+#footpart2 {
+    margin-top: 30px;
+    margin-left: 30px;
+    display: flex;
+}
+
+#cont1 {
+    color: white;
+    font-size: 13px;
+}
+
+#cont1 p {
+    margin-bottom: 10px;
+}
+
+.about-text {
+    color: grey;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.about-text:hover {
+    color: white;
+}
+
+.cont2 {
+    color: white;
+    font-size: 13px;
+    margin-left: 100px;
+}
+
+.cont2 p {
+    margin-bottom: 10px;
+}
+
+#cont5 {
+    margin-left: 25vw;
+    font-size: 13px;
+    color: white;
+}
+
+#cont5 p {
+    margin-bottom: 10px;
+}
+
+#footpart1 {
+    margin-left: 0px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid white;
+    display: flex;
+}
+
+#footpart1 p {
+    color: white;
+    font-size: 13px;
+    margin-right: 85px;
+    padding-bottom: 5px;
+    margin-left: 85px;
+    letter-spacing: 0.5px;
+}
+
+#social {
+    display: flex;
+}
+
+#social a img {
+    margin-left: 5px;
+    height: 37px;
+    transition: all 0.3s;
+}
+
+#social a img:hover {
+    transform: scale(1.07);
+}
+
+@media (min-width: 1200px) and (max-width:1330px) {
+    #search input {
+        margin-left: 80px;
+        width: 225px;
+    }
+
+    #button {
+        margin-left: 90px;
+    }
+
+}
+
+@media (min-width: 1100px) and (max-width:1200px) {
+    #search input {
+        margin-left: 60px;
+    }
+
+    #search-logo {
+        position: absolute;
+        left: 650px;
+    }
+
+    .header-btn {
+        margin-left: 80px;
+    }
+
+    .dropdown {
+        margin-left: 25px;
+    }
+
+    nav ul li {
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+
+    main {
+        margin-top: 20vh;
+    }
+
+    .check {
+        display: block;
+    }
+
+    .check i {
+        font-size: 27px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: 100px;
+    }
+
+    nav img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        position: fixed;
+        width: 300px;
+        height: 390px;
+        text-align: center;
+        background-color: black;
+        top: 8vh;
+        left: 0px;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin-top: 30px;
+        left: -100%;
+    }
+
+    .dropdown {
+        margin-left: 0px;
+    }
+
+    .dropdown-text {
+        display: none;
+        padding-left: 0px;
+    }
+
+    .nav-content {
+        display: block;
+        margin-top: 65px;
+        position: relative;
+        text-align: center;
+        left: 00px;
+    }
+
+    .nav-content a {
+        display: block;
+        color: white;
+        font-size: 15px;
+        font-weight: 900;
+        padding-top: 15px;
+        letter-spacing: 1px;
+    }
+
+    .nav-content a:hover {
+        color: rgb(237, 75, 75);
+    }
+
+    .header-content {
+        font-weight: 900;
+        display: inline-block;
+        text-decoration: none;
+        padding-top: 15px;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+
+    #search-logo {
+        display: none;
+    }
+
+    #search {
+        position: relative;
+        top: 9vh;
+        left: -100%;
+    }
+
+    #search input {
+        background-color: black;
+        color: white;
+        opacity: 1;
+        height: 30px;
+        width: 200px;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+
+    #checkbox:checked~ul {
+        left: -3%;
+    }
+
+    #checkbox:checked~#search {
+        left: -150px;
+    }
+
+    .main_logo {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .check {
+        display: block;
+    }
+
+    .check i {
+        font-size: 27px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: 90px;
+    }
+
+    nav img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        position: fixed;
+        width: 250px;
+        height: 350px;
+        text-align: center;
+        background-color: black;
+        top: 8vh;
+        left: 0px;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin-top: 30px;
+        left: -100%;
+    }
+
+    .dropdown {
+        margin-left: 0px;
+    }
+
+    .dropdown-text {
+        display: none;
+        padding-left: 0px;
+    }
+
+    .nav-content {
+        display: block;
+        margin-top: 60px;
+        position: relative;
+        text-align: center;
+        left: 0px;
+    }
+
+    .nav-content a {
+        display: block;
+        color: white;
+        font-size: 12px;
+        font-weight: 900;
+        padding-top: 15px;
+        letter-spacing: 1px;
+    }
+
+    .nav-content a:hover {
+        color: rgb(237, 75, 75);
+    }
+
+    .header-content {
+        font-weight: 900;
+        display: inline-block;
+        text-decoration: none;
+        padding-top: 15px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    #search-logo {
+        display: none;
+    }
+
+    #search {
+        position: relative;
+        top: 9vh;
+        left: -100%;
+    }
+
+    #search input {
+        background-color: black;
+        color: white;
+        opacity: 1;
+        height: 30px;
+        width: 170px;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+
+    #checkbox:checked~ul {
+        left: -3%;
+    }
+
+    #checkbox:checked~#search {
+        left: -100px;
+    }
+
+    .main_logo {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
+    .check {
+        display: block;
+    }
+
+    .check i {
+        font-size: 27px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: 90px;
+    }
+
+    nav img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        position: fixed;
+        width: 220px;
+        height: 320px;
+        text-align: center;
+        background-color: black;
+        top: 8vh;
+        left: 0px;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin-top: 30px;
+        left: -100%;
+    }
+
+    .dropdown {
+        margin-left: 0px;
+    }
+
+    .dropdown-text {
+        display: none;
+        padding-left: 0px;
+    }
+
+    .nav-content {
+        display: block;
+        margin-top: 55px;
+        position: relative;
+        text-align: center;
+        left: 00px;
+    }
+
+    .nav-content a {
+        display: block;
+        color: white;
+        font-size: 10px;
+        font-weight: 900;
+        padding-top: 15px;
+        letter-spacing: 1px;
+    }
+
+    .nav-content a:hover {
+        color: rgb(237, 75, 75);
+    }
+
+    .header-content {
+        font-weight: 900;
+        display: inline-block;
+        text-decoration: none;
+        padding-top: 15px;
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+
+    #search-logo {
+        display: none;
+    }
+
+    #search {
+        position: relative;
+        top: 9vh;
+        left: -100%;
+    }
+
+    #search input {
+        background-color: black;
+        color: white;
+        opacity: 1;
+        height: 30px;
+        width: 150px;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+
+    #checkbox:checked~ul {
+        left: -3%;
+    }
+
+    #checkbox:checked~#search {
+        left: -30px;
+    }
+
+    .main_logo {
+        margin-left: 20px;
+    }
+}
