@@ -1,0 +1,30 @@
+.container{
+    border: 2px solid black;
+    margin-top: 10%;
+}
+.col,.col-5{
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.682);
+    color: white;
+}
+.col{
+    text-align: center;
+}
+.row{
+    border-top: 1px solid red;
+}
+.col-9{
+    border-right: 2px solid black;
+    
+}
+ul{
+    list-style-type: none;
+    text-align: left;
+}
+ul li{
+    display: inline-block;
+    margin: 8px;
+}
+.col-md-7{
+    border-bottom: 1px solid black;
+}
