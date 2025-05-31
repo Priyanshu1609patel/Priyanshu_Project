@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    height: 100vh;
+    background: 
+        linear-gradient(90deg, rgba(220,220,220,0.08) 1px, transparent 1px),
+        linear-gradient(rgba(220,220,220,0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-color: #f4f7fc;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #1f2d3d;
+    color: #fff;
+    padding: 30px 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00b894;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #00b894;
+    color: #fff;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.top-bar {
+    margin-bottom: 30px;
+    background-color: #ffffd9;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.top-bar p {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #555;
+}
+
+.card {
+    background-color: #ffffd9;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #34495e;
+    font-size: 22px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.actions a {
+    text-decoration: none;
+    background-color: #00b894;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.actions a:hover {
+    background-color: #019875;
+}
+
+/* Calendar Section */
+.calendar-section {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Budget Alert Box */
+.budget-alert {
+    margin-top: 15px;
+    padding: 15px 20px;
+    background-color: #ffe0e0;
+    border-left: 5px solid #d63031;
+    color: #d63031;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .actions a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 200px;
+        padding: 20px 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
